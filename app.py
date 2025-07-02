@@ -137,32 +137,28 @@ with st.container():
         st.markdown("[Watch Video...](https://youtu.be/M6o1Z8fajsU)")
 
         # ✅ Dropbox Download Integration
-        st.markdown("### 📥 Download Project Installer")
-        st.markdown(
-            "[🗂️ Download Sugar Cane Monitoring Program (ZIP)](https://www.dropbox.com/scl/fi/iw0j8hn74dgob9swhpeby/SCFMvGDPrime-Installer.zip?rlkey=1cng3cgw50as74p7vavcj4zg3&st=sblq5xyg&dl=1)",
-            unsafe_allow_html=True
-        )
-
+       
+       
 #----- DOWNLOAD SECTION ------
 with st.container():
     st.write("---")
+    st.markdown("### 📥 Download Project Installer")
     st.header("📂 Download My Files")
     st.write("##")
 
     st.markdown("### 🗂️ Download DTR (ZIP)")
     st.markdown(
-    '[🗂️ Download DTR (ZIP)](https://www.dropbox.com/scl/fi/YOUR_FILE_ID/MDTR_71.zip?rlkey=...&dl=1)',
+    '[🗂️ Download DTR (ZIP)](https://www.dropbox.com/scl/fi/22osdj2fem0y33a3y67r8/MDTR_71.zip?rlkey=8hkncybi46i0b4j0shwhpg6sa&st=ql4v5hsg&dl=0)',
     unsafe_allow_html=True
     )
 
     st.markdown("### 🗂️ Download Sugar Cane Monitoring Program (ZIP)")
     st.markdown(
-    '[🗂️ Download Sugarcane Monitor (ZIP)](https://www.dropbox.com/scl/fi/YOUR_FILE_ID/SCFMvGDPrime-Installer.zip?rlkey=...&dl=1)',
+    "[🗂️ Download Sugar Cane Monitoring Program (ZIP)](https://www.dropbox.com/scl/fi/iw0j8hn74dgob9swhpeby/SCFMvGDPrime-Installer.zip?rlkey=1cng3cgw50as74p7vavcj4zg3&st=sblq5xyg&dl=1)",
     unsafe_allow_html=True
     )
+
     st.markdown("### 📁 Available Downloads")
-
-
 
 
         
