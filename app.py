@@ -151,16 +151,15 @@ with st.container():
 
     st.markdown("### 🗂️ Download DTR (ZIP)")
     st.markdown(
-        "[📥 Download DTR (MDTR_71.zip)](https://www.dropbox.com/scl/fi/iw0j8hn74dgob9swhpeby/SCFMvGDPrime-Installer.zip?rlkey=1cng3cgw50as74p7vavcj4zg3&st=sblq5xyg&dl=1)",
-        unsafe_allow_html=True
+    '[🗂️ Download DTR (ZIP)](https://www.dropbox.com/scl/fi/YOUR_FILE_ID/MDTR_71.zip?rlkey=...&dl=1)',
+    unsafe_allow_html=True
     )
 
     st.markdown("### 🗂️ Download Sugar Cane Monitoring Program (ZIP)")
     st.markdown(
-        "[📥 Download SCFMvGDPrime-Installer.zip](https://www.dropbox.com/scl/fi/iw0j8hn74dgob9swhpeby/SCFMvGDPrime-Installer.zip?rlkey=1cng3cgw50as74p7vavcj4zg3&st=sblq5xyg&dl=1)",
-        unsafe_allow_html=True
+    '[🗂️ Download Sugarcane Monitor (ZIP)](https://www.dropbox.com/scl/fi/YOUR_FILE_ID/SCFMvGDPrime-Installer.zip?rlkey=...&dl=1)',
+    unsafe_allow_html=True
     )
-
     st.markdown("### 📁 Available Downloads")
 
 
