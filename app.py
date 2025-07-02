@@ -142,8 +142,8 @@ with st.container():
 #----- DOWNLOAD SECTION ------
 with st.container():
     st.write("---")
-    st.markdown("### 📥 Download Project Installer")
     st.header("📂 Download My Files")
+    st.markdown("### 📥 Download Project Installer")
     st.write("##")
 
     st.markdown("### 🗂️ Download DTR (ZIP)")
