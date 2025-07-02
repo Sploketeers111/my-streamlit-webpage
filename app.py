@@ -149,29 +149,20 @@ with st.container():
     st.header("📂 Download My Files")
     st.write("##")
 
-    try:
-        with open("D:/IANSPY4/Webpage/files/MDTR_71.zip", "rb") as file:
-            st.download_button(
-                label="🗂️ Download DTR (ZIP)",
-                data=file,
-                file_name="MDTR_71.zip",
-                mime="application/zip"
-            )
-    except FileNotFoundError:
-        st.warning("⚠️ Local file MDTR_71.zip not found.")
+    st.markdown("### 🗂️ Download DTR (ZIP)")
+    st.markdown(
+        "[📥 Download DTR (MDTR_71.zip)](https://www.dropbox.com/scl/fi/iw0j8hn74dgob9swhpeby/SCFMvGDPrime-Installer.zip?rlkey=1cng3cgw50as74p7vavcj4zg3&st=sblq5xyg&dl=1)",
+        unsafe_allow_html=True
+    )
 
-    try:
-        with open("D:/IANSPY4/Webpage/files/SCFMvGDPrime-Installer.zip", "rb") as file:
-            st.download_button(
-                label="🗂️ Download Sugar Cane Monitoring Program (ZIP)",
-                data=file,
-                file_name="SCFMvGDPrime-Installer.zip",
-                mime="application/zip"
-            )
-    except FileNotFoundError:
-        st.info("🔗 File too large? Use the Dropbox link above to download.")
+    st.markdown("### 🗂️ Download Sugar Cane Monitoring Program (ZIP)")
+    st.markdown(
+        "[📥 Download SCFMvGDPrime-Installer.zip](https://www.dropbox.com/scl/fi/iw0j8hn74dgob9swhpeby/SCFMvGDPrime-Installer.zip?rlkey=1cng3cgw50as74p7vavcj4zg3&st=sblq5xyg&dl=1)",
+        unsafe_allow_html=True
+    )
 
     st.markdown("### 📁 Available Downloads")
+
 
 
 
