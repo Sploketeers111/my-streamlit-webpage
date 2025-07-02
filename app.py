@@ -143,26 +143,6 @@ with st.container():
             unsafe_allow_html=True
         )
 
-# ---- PROJECTS ----
-with st.container():
-    st.write("---")
-    st.header("My Projects")
-    st.write("##")
-    image_column, text_column = st.columns((1, 2))
-    with image_column:
-        st.image(img_contact_form, use_container_width=True)
-    with text_column:
-        st.subheader("Intelligent Programming")
-        st.write("Learn to create a program")
-        st.markdown("[Watch Video...](https://youtu.be/M6o1Z8fajsU)")
-
-        # ✅ Dropbox Download Integration
-        st.markdown("### 📥 Download Project Installer")
-        st.markdown(
-            "[🗂️ Download Sugar Cane Monitoring Program (ZIP)](https://www.dropbox.com/scl/fi/iw0j8hn74dgob9swhpeby/SCFMvGDPrime-Installer.zip?rlkey=1cng3cgw50as74p7vavcj4zg3&st=sblq5xyg&dl=1)",
-            unsafe_allow_html=True
-        )
-
 #----- DOWNLOAD SECTION ------
 with st.container():
     st.write("---")
@@ -192,6 +172,7 @@ with st.container():
         st.info("🔗 File too large? Use the Dropbox link above to download.")
 
     st.markdown("### 📁 Available Downloads")
+
 
 
         
