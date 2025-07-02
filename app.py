@@ -103,7 +103,7 @@ with st.container():
     st.header("📸 My Photo Album")
     st.write("##")
 
-    album_dir = "D:/IANSPY4/Webpage/images/albums"
+    album_dir = "images/albums"
 
     if os.path.exists(album_dir):
         image_files = [
