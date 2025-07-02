@@ -72,7 +72,7 @@ button:hover {
 """, unsafe_allow_html=True)
 
 # ---- Load Image Asset ----
-img_contact_form = Image.open("D:/IANSPY4/Webpage/images/p1.png")
+img_contact_form = Image.open("images/p1.png")
 
 # ---- HEADER ----
 with st.container():
