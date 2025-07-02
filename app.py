@@ -10,8 +10,8 @@ def get_base64(file_path):
     return base64.b64encode(data).decode()
 
 # --- Set local image as background ---
-def set_bg_from_local(image_path):
-    encoded = get_base64(image_path)
+def set_bg_from_local(file_path):
+    encoded = get_base64(file_path)
     css = f"""
     <style>
     .stApp {{
@@ -27,8 +27,8 @@ def set_bg_from_local(image_path):
 # --- Page Settings ---
 st.set_page_config(page_title="My Webpage", page_icon=":tada:", layout="wide")
 
-# ✅ Use local image as background
-set_bg_from_local("D:/IANSPY4/Webpage/Py.jpg")
+# ✅ Use relative path to the image (important when deployed)
+set_bg_from_local("Py.jpg")
 
 # --- Contact Form Styling (CSS) ---
 st.markdown("""
