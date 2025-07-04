@@ -113,7 +113,22 @@ with st.container():
     st.write("---")
     st.header("🎬 Watch Movies Online")
     st.write("##")
-
+    
+    # Centered style
+    st.markdown("""
+        <style>
+        .centered-box {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        </style>
+        <div class="centered-box">
+    """, unsafe_allow_html=True)
+    
     st.subheader("📁 Choose a Movie from My Terabox Folder")
 
     movie_links = {
