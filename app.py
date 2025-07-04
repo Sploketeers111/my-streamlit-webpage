@@ -100,22 +100,14 @@ with st.container():
         
 #----WHATCH YOU TUBE-----
 st.write("---")
-st.header("🎬 Search & Watch Movies on YouTube")
-st.write("Type a movie title to find and watch it right here.")
-
-query = st.text_input("🔍 Search for a movie", placeholder="e.g. The Matrix")
+st.header("🎬 Search and Watch Movies")
+query = st.text_input("Enter movie or video title:")
 
 if query:
-    with st.spinner("Searching on YouTube..."):
-        search = VideosSearch(query, limit=1)
-        result = search.result()
-
-        if result['result']:
-            video_url = result['result'][0]['link']
-            st.success(f"Found: {result['result'][0]['title']}")
-            st.video(video_url)
-        else:
-            st.warning("No results found.") 
+    st.info(f"Searching for: **{query}**")
+    search_url = f"https://www.youtube.com/results?search_query={query.replace(' ', '+')}"
+    st.markdown(f"[🔍 View Results on YouTube]({search_url})", unsafe_allow_html=True)
+    
             
 # ---- PHOTO ALBUM ----
 with st.container():
