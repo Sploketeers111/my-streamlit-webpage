@@ -98,18 +98,21 @@ with st.container():
         """)
         st.write("[YouTube Channel >](https://youtu.be/FBjGtN6BqkU)")
         
-#----WHATCH YOU TUBE-----
+# ---- WATCH YOUTUBE ----
 st.write("---")
 st.header("🎬 Search and Watch Movies")
-query = st.text_input("Enter movie or video title:")
+
+# Use columns to center and limit width
+left_space, center_col, right_space = st.columns([1, 2, 1])  # adjust width ratio
+
+with center_col:
+    query = st.text_input("Enter movie or video title:")
 
 if query:
-    # 🔄 Layout: dropdown on the left, info on the right
-    left_col, right_col = st.columns([1.2, 2])
-    
     st.info(f"Searching for: **{query}**")
     search_url = f"https://www.youtube.com/results?search_query={query.replace(' ', '+')}"
     st.markdown(f"[🔍 CLICK ! to View Results on YouTube]({search_url})", unsafe_allow_html=True)
+
     
     
 # ---- MOVIE DROPDOWN ----
