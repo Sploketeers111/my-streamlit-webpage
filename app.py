@@ -32,7 +32,6 @@ st.set_page_config(page_title="My Webpage", page_icon=":tada:", layout="wide")
 # ✅ Use relative path to the image (important when deployed)
 set_bg_from_local("Py.jpg")
 
-# --- Contact Form Styling (CSS) ---
 # --- Contact Form Styling (CSS) + Scrollbar ---
 st.markdown("""
 <style>
@@ -75,7 +74,7 @@ button:hover {
 
 /* Scrollbar Styling for WebKit Browsers */
 ::-webkit-scrollbar {
-    width: 14px;
+    width: 18px;
 }
 ::-webkit-scrollbar-track {
     background: #f1f1f1;
