@@ -127,7 +127,7 @@ with st.container():
         st.subheader("📁 Choose a Movie")
         selected_movie = st.selectbox("🎞️ Select a movie to watch:", list(movie_links.keys()), key="movie_dropdown")
 
-    with right_col:
+    with left_col:
         if selected_movie:
             movie_url = movie_links[selected_movie]
             st.success(f"🎬 Ready to watch: **{selected_movie}**")
