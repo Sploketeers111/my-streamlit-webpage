@@ -113,51 +113,27 @@ if query:
 with st.container():
     st.write("---")
     st.header("🎬 Watch Movies Online")
-    st.write("##")
+    
+    # 🎬 Movie Dictionary
+    movie_links = {
+        "Jason Statham: In Death": "https://1024terabox.com/s/1flbjkxGYIC_7EEHcVE2o8A",
+        "Under World: Evolution": "https://1024terabox.com/s/1tl3csnByq9h3OhQylkt4Pw"
+    }
 
-    # Apply CSS for the centered dropdown box
-    st.markdown("""
-        <style>
-        .centered-box {
-            max-width: 400px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        </style>
-    """, unsafe_allow_html=True)
+    # 🔄 Layout: dropdown on the left, info on the right
+    left_col, right_col = st.columns([1.2, 2])
 
-    # Begin centered layout using columns
-    left_col, center_col, right_col = st.columns([1, 2, 1])
-    with center_col:
-        st.markdown('<div class="centered-box">', unsafe_allow_html=True)
-        st.subheader("📁 Choose a Movie from My Terabox Folder")
-
-        # 🎬 Movie List
-        movie_links = {
-            "Jason Statham: In Death": "https://1024terabox.com/s/1flbjkxGYIC_7EEHcVE2o8A",
-            "Under World: Evolution": "https://1024terabox.com/s/1tl3csnByq9h3OhQylkt4Pw"
-        }
-
-        # 🎞️ Dropdown
+    with left_col:
+        st.subheader("📁 Choose a Movie")
         selected_movie = st.selectbox("🎞️ Select a movie to watch:", list(movie_links.keys()), key="movie_dropdown")
 
+    with right_col:
         if selected_movie:
             movie_url = movie_links[selected_movie]
-            st.markdown(f"""
-                <p style='margin-top: 20px;'>
-                    👉 <a href="{movie_url}" target="_blank"><b>🎬 Watch {selected_movie}</b></a>
-                </p>
-            """, unsafe_allow_html=True)
+            st.success(f"🎬 Ready to watch: **{selected_movie}**")
+            st.markdown(f"👉 [Click here to watch now]({movie_url})", unsafe_allow_html=True)
 
-        st.markdown('</div>', unsafe_allow_html=True)
-
-
-
-            
+        
 # ---- PHOTO ALBUM ----
 with st.container():
     st.write("---")
