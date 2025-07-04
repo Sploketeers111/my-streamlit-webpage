@@ -106,7 +106,7 @@ query = st.text_input("Enter movie or video title:")
 if query:
     st.info(f"Searching for: **{query}**")
     search_url = f"https://www.youtube.com/results?search_query={query.replace(' ', '+')}"
-    st.markdown(f"[🔍 View Results on YouTube]({search_url})", unsafe_allow_html=True)
+    st.markdown(f"[🔍 CLICK ! to View Results on YouTube]({search_url})", unsafe_allow_html=True)
     
             
 # ---- PHOTO ALBUM ----
