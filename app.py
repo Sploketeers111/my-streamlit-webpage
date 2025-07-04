@@ -114,24 +114,16 @@ with st.container():
     st.header("🎬 Watch Movies Online")
     st.write("##")
 
-    # 🎥 YouTube Search
-    st.subheader("🔎 Search Movies on YouTube")
-    query = st.text_input("Enter movie or video title:")
-
-    if query:
-        st.info(f"Showing YouTube search results for: **{query}**")
-        search_url = f"https://www.youtube.com/results?search_query={query.replace(' ', '+')}"
-        st.markdown(f"[▶️ Click here to watch on YouTube]({search_url})", unsafe_allow_html=True)
-
     # 🗂️ Terabox Link
     st.subheader("📁 My Movie Folder (Terabox)")
     st.markdown(
         """
-        You can also stream or download full movies from my shared Terabox folder below:
+        Enjoy streaming or downloading full movies from my shared Terabox folder below:
 
         👉 [🎞️ Open Terabox Movie Collection](https://1024terabox.com/s/1ViLw_XVaKIfi8unA_1JJ4g)
         """
     )
+
             
 # ---- PHOTO ALBUM ----
 with st.container():
