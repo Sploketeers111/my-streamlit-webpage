@@ -105,7 +105,7 @@ st.header("🎬 Search and Watch Movies")
 # Use columns to center and limit width
 left_space, center_col, right_space = st.columns([1, 2, 1])  # adjust width ratio
 
-with center_col:
+with left_col:
     query = st.text_input("Enter movie or video title:")
 
 if query:
