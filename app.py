@@ -117,10 +117,9 @@ with st.container():
     st.subheader("📁 Choose a Movie from My Terabox Folder")
 
     movie_links = {
-        "Avengers: Endgame": "https://1024terabox.com/s/example-link-avengers",
-        "Fast & Furious 9": "https://1024terabox.com/s/example-link-fast9",
-        "John Wick 4": "https://1024terabox.com/s/example-link-johnwick4",
-        "My Full Movie Folder": "https://1024terabox.com/s/1ViLw_XVaKIfi8unA_1JJ4g"
+        "Jason Statham: In Death": "https://1024terabox.com/s/1flbjkxGYIC_7EEHcVE2o8A",
+        "Under World: Evolution "(https://1024terabox.com/s/1ViLw_XVaKIfi8unA_1JJ4g",
+        
     }
 
     selected_movie = st.selectbox("🎞️ Select a movie to watch:", list(movie_links.keys()))
