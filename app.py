@@ -2,6 +2,8 @@ import streamlit as st
 from PIL import Image
 import base64
 import os
+from youtubesearchpython import VideosSearch
+
 
 # --- Convert local image to Base64 ---
 def get_base64(file_path):
@@ -95,7 +97,25 @@ with st.container():
             - Eager to learn more every day!
         """)
         st.write("[YouTube Channel >](https://youtu.be/FBjGtN6BqkU)")
+        
+#----WHATCH YOU TUBE-----
+st.write("---")
+st.header("🎬 Search & Watch Movies on YouTube")
+st.write("Type a movie title to find and watch it right here.")
 
+query = st.text_input("🔍 Search for a movie", placeholder="e.g. The Matrix")
+
+if query:
+    with st.spinner("Searching on YouTube..."):
+        search = VideosSearch(query, limit=1)
+        result = search.result()
+
+        if result['result']:
+            video_url = result['result'][0]['link']
+            st.success(f"Found: {result['result'][0]['title']}")
+            st.video(video_url)
+        else:
+            st.warning("No results found.") 
             
 # ---- PHOTO ALBUM ----
 with st.container():
