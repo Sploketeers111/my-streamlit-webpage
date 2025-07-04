@@ -102,16 +102,17 @@ with st.container():
 st.write("---")
 st.header("🎬 Search and Watch Movies")
 
-# Use columns to center and limit width
-left_space, center_col, right_space = st.columns([1, 2, 1])  # adjust width ratio
+# Use two columns: left for input, right for spacing or future content
+left_col, _ = st.columns([1, 3])  # smaller left, wider right
 
 with left_col:
-    query = st.text_input("Enter movie or video title:")
+    query = st.text_input("🎞️ Enter movie or video title:")
 
+# Process the search if query is entered
 if query:
     st.info(f"Searching for: **{query}**")
     search_url = f"https://www.youtube.com/results?search_query={query.replace(' ', '+')}"
-    st.markdown(f"[🔍 CLICK ! to View Results on YouTube]({search_url})", unsafe_allow_html=True)
+    st.markdown(f"[🔍 CLICK to View Results on YouTube]({search_url})", unsafe_allow_html=True)
 
     
     
