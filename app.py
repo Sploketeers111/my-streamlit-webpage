@@ -33,8 +33,10 @@ st.set_page_config(page_title="My Webpage", page_icon=":tada:", layout="wide")
 set_bg_from_local("Py.jpg")
 
 # --- Contact Form Styling (CSS) ---
+# --- Contact Form Styling (CSS) + Scrollbar ---
 st.markdown("""
 <style>
+/* Contact Form Styling */
 form {
     background-color: rgba(255, 255, 255, 0.95);
     padding: 30px;
@@ -70,8 +72,31 @@ button {
 button:hover {
     background-color: #45a049;
 }
+
+/* Scrollbar Styling for WebKit Browsers */
+::-webkit-scrollbar {
+    width: 14px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Firefox Scrollbar */
+html {
+  scrollbar-width: auto;
+  scrollbar-color: #888 #f1f1f1;
+}
 </style>
 """, unsafe_allow_html=True)
+
 
 # ---- Load Image Asset ----
 img_contact_form = Image.open("images/p1.png")
