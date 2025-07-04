@@ -108,22 +108,27 @@ if query:
     search_url = f"https://www.youtube.com/results?search_query={query.replace(' ', '+')}"
     st.markdown(f"[🔍 CLICK ! to View Results on YouTube]({search_url})", unsafe_allow_html=True)
     
-# ---- WATCH MOVIES ONLINE ----
+# ---- MOVIE DROPDOWN ----
 with st.container():
     st.write("---")
     st.header("🎬 Watch Movies Online")
     st.write("##")
 
-    # 🗂️ Terabox Link
-    st.subheader("📁 My Movie Folder (Terabox)")
-    st.markdown(
-        """
-        Enjoy streaming or downloading full movies from my shared Terabox folder below:
+    st.subheader("📁 Choose a Movie from My Terabox Folder")
 
-        👉 [🎞️ Open Terabox Movie Collection](https://1024terabox.com/s/1ViLw_XVaKIfi8unA_1JJ4g)
-        👉 [🎞️ Open Terabox Movie Collection](https://1024terabox.com/s/1flbjkxGYIC_7EEHcVE2o8A)
-        """
-    )
+    movie_links = {
+        "Avengers: Endgame": "https://1024terabox.com/s/example-link-avengers",
+        "Fast & Furious 9": "https://1024terabox.com/s/example-link-fast9",
+        "John Wick 4": "https://1024terabox.com/s/example-link-johnwick4",
+        "My Full Movie Folder": "https://1024terabox.com/s/1ViLw_XVaKIfi8unA_1JJ4g"
+    }
+
+    selected_movie = st.selectbox("🎞️ Select a movie to watch:", list(movie_links.keys()))
+
+    if selected_movie:
+        st.markdown(f"👉 [🎬 Click here to watch **{selected_movie}**]({movie_links[selected_movie]})", unsafe_allow_html=True)
+
+
 
             
 # ---- PHOTO ALBUM ----
